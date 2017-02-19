@@ -99,3 +99,4 @@ tags
 
 'db'
 build/
+.env
