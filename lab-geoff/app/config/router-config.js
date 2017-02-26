@@ -4,7 +4,7 @@ function routerConfig($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.when('signup', '/join#signup');
   $urlRouterProvider.when('', '/join#signup');
   $urlRouterProvider.when('/', '/join$signup');
-  $urlRouterProvider.when('/login', 'join#login');
+  $urlRouterProvider.when('/login', '/join#login');
 
   let states = [
     {
