@@ -1,9 +1,12 @@
-<section>
+<section class="login">
+  <h2>Log In</h2>
   <form ng-submit="loginCtrl.login()" novalidate>
 
     <div>
       <input type="text" name="username" minlength="4" placeholder="username" ng-model="loginCtrl.user.username" required>
+    </div>
 
+    <div>
       <input type="text" placeholder="email">
     </div>
 
