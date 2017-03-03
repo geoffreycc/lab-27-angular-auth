@@ -23,7 +23,9 @@ function galleryService($q, $log, $http, authService) {
     })
     .then( res => {
       $log.debug('post request');
-      $log.debug(res.data);
+      let gallery = res.data;
+      service.galleries.unshift(gallery);
+      return gallery;
     })
     .catch( err => {
       $log.error(err.message);
