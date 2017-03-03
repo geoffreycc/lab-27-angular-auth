@@ -14,16 +14,16 @@ function galleryService($q, $log, $http, authService) {
       let url = `${__API_URL__}/api/gallery`;
       let config = {
         headers: {
+          Accept: 'application/json',
           'Content-Type': 'application/json',
-          Authorization : `Basic ${token}`,
-          Accept: 'application/json'
+          Authorization : `Bearer ${token}`,
         }
       };
-      return $http.post(url, gallery, config)
-      .then( res => {
-        $log.debug('post request');
-        $log.debug(res.data);
-      });
+      return $http.post(url, gallery, config);
+    })
+    .then( res => {
+      $log.debug('post request');
+      $log.debug(res.data);
     })
     .catch( err => {
       $log.error(err.message);

@@ -14,8 +14,8 @@ function GalleryController ($log, galleryService) {
   this.create = function() {
     galleryService.createGallery(this.gallery)
     .then( () => {
-      this.gallery.galleryName = null;
-      this.gallery.galleryDesc = null;
+      this.gallery.name = null;
+      this.gallery.desc = null;
     });
   };
 }
