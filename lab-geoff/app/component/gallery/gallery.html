@@ -1,8 +1,12 @@
 <section>
   <h2>Create Gallery</h2>
   <form ng-submit="galleryCtrl.create()" novalidate>
-    <input type="text" placeholder="Gallery Name" ng-model="galleryCtrl.gallery.name">
-    <input type="text" placeholder="Gallery Description" ng-model="galleryCtrl.gallery.desc">
+    <div>
+      <input type="text" placeholder="Gallery Name" ng-model="galleryCtrl.gallery.name">
+    </div>
+    <div>
+      <input type="text" placeholder="Gallery Description" ng-model="galleryCtrl.gallery.desc">
+    </div>
     <button>Create</button>
   </form>
 </section>
